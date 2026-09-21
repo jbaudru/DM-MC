@@ -1,5 +1,5 @@
 {
-  "timestamp": "20260622_145330",
+  "timestamp": "20260804_115418",
   "meta": {
     "data_paths": [
       "data/worldmove_380_US.csv",
@@ -14,7 +14,7 @@
     ],
     "test_ratio": 0.1,
     "val_ratio": 0.1,
-    "train_fraction": 0.5,
+    "train_fraction": 1.0,
     "seed": 42,
     "encodings": [
       "categorical_id",
@@ -30,20 +30,7 @@
     "graph_embedding_clusters": 1024,
     "graph_embedding_method": "spatial",
     "baselines": [
-      "akom",
-      "cpt",
-      "mogen",
-      "iohmm",
-      "mc2",
-      "mc2p",
-      "mc5p",
-      "mc10p",
-      "mc5",
-      "mc10",
-      "mc1_ge",
-      "mc2_ge",
-      "mc5_ge",
-      "mc10_ge"
+      "mc2"
     ],
     "datasets": [
       {
@@ -60,16 +47,14 @@
             "split_dir": "saved_models\\ds0_worldmove_380_US\\split_0",
             "ds_idx": 0,
             "ds_label": "worldmove_380_US",
-            "n_train": 50367,
-            "n_val": 5596,
+            "n_train": 100734,
+            "n_val": 11192,
             "n_test": 2745,
             "vocab_size_cat": 61830,
-            "vocab_size_db": 138813,
-            "vocab_size_ge": 1024,
+            "vocab_size_db": 0,
+            "vocab_size_ge": 0,
             "active_encodings": [
-              "categorical_id",
-              "debruijn",
-              "graph_embedding"
+              "categorical_id"
             ],
             "user_aware_eval": true,
             "user_history_nodes": 3000
@@ -90,16 +75,14 @@
             "split_dir": "saved_models\\ds1_worldmove_431_DE\\split_0",
             "ds_idx": 1,
             "ds_label": "worldmove_431_DE",
-            "n_train": 11993,
-            "n_val": 1332,
+            "n_train": 23987,
+            "n_val": 2665,
             "n_test": 620,
             "vocab_size_cat": 22760,
-            "vocab_size_db": 47954,
-            "vocab_size_ge": 1024,
+            "vocab_size_db": 0,
+            "vocab_size_ge": 0,
             "active_encodings": [
-              "categorical_id",
-              "debruijn",
-              "graph_embedding"
+              "categorical_id"
             ],
             "user_aware_eval": true,
             "user_history_nodes": 3000
@@ -120,16 +103,14 @@
             "split_dir": "saved_models\\ds2_worldmove_539_SG\\split_0",
             "ds_idx": 2,
             "ds_label": "worldmove_539_SG",
-            "n_train": 26502,
-            "n_val": 2944,
+            "n_train": 53004,
+            "n_val": 5889,
             "n_test": 1425,
             "vocab_size_cat": 17252,
-            "vocab_size_db": 40629,
-            "vocab_size_ge": 1024,
+            "vocab_size_db": 0,
+            "vocab_size_ge": 0,
             "active_encodings": [
-              "categorical_id",
-              "debruijn",
-              "graph_embedding"
+              "categorical_id"
             ],
             "user_aware_eval": true,
             "user_history_nodes": 3000
@@ -150,16 +131,14 @@
             "split_dir": "saved_models\\ds3_worldmove_609_AE\\split_0",
             "ds_idx": 3,
             "ds_label": "worldmove_609_AE",
-            "n_train": 6342,
-            "n_val": 704,
+            "n_train": 12685,
+            "n_val": 1409,
             "n_test": 304,
             "vocab_size_cat": 26202,
-            "vocab_size_db": 52619,
-            "vocab_size_ge": 1024,
+            "vocab_size_db": 0,
+            "vocab_size_ge": 0,
             "active_encodings": [
-              "categorical_id",
-              "debruijn",
-              "graph_embedding"
+              "categorical_id"
             ],
             "user_aware_eval": true,
             "user_history_nodes": 3000
@@ -174,16 +153,14 @@
         "split_dir": "saved_models\\ds0_worldmove_380_US\\split_0",
         "ds_idx": 0,
         "ds_label": "worldmove_380_US",
-        "n_train": 50367,
-        "n_val": 5596,
+        "n_train": 100734,
+        "n_val": 11192,
         "n_test": 2745,
         "vocab_size_cat": 61830,
-        "vocab_size_db": 138813,
-        "vocab_size_ge": 1024,
+        "vocab_size_db": 0,
+        "vocab_size_ge": 0,
         "active_encodings": [
-          "categorical_id",
-          "debruijn",
-          "graph_embedding"
+          "categorical_id"
         ],
         "user_aware_eval": true,
         "user_history_nodes": 3000
@@ -194,16 +171,14 @@
         "split_dir": "saved_models\\ds1_worldmove_431_DE\\split_0",
         "ds_idx": 1,
         "ds_label": "worldmove_431_DE",
-        "n_train": 11993,
-        "n_val": 1332,
+        "n_train": 23987,
+        "n_val": 2665,
         "n_test": 620,
         "vocab_size_cat": 22760,
-        "vocab_size_db": 47954,
-        "vocab_size_ge": 1024,
+        "vocab_size_db": 0,
+        "vocab_size_ge": 0,
         "active_encodings": [
-          "categorical_id",
-          "debruijn",
-          "graph_embedding"
+          "categorical_id"
         ],
         "user_aware_eval": true,
         "user_history_nodes": 3000
@@ -214,16 +189,14 @@
         "split_dir": "saved_models\\ds2_worldmove_539_SG\\split_0",
         "ds_idx": 2,
         "ds_label": "worldmove_539_SG",
-        "n_train": 26502,
-        "n_val": 2944,
+        "n_train": 53004,
+        "n_val": 5889,
         "n_test": 1425,
         "vocab_size_cat": 17252,
-        "vocab_size_db": 40629,
-        "vocab_size_ge": 1024,
+        "vocab_size_db": 0,
+        "vocab_size_ge": 0,
         "active_encodings": [
-          "categorical_id",
-          "debruijn",
-          "graph_embedding"
+          "categorical_id"
         ],
         "user_aware_eval": true,
         "user_history_nodes": 3000
@@ -234,16 +207,14 @@
         "split_dir": "saved_models\\ds3_worldmove_609_AE\\split_0",
         "ds_idx": 3,
         "ds_label": "worldmove_609_AE",
-        "n_train": 6342,
-        "n_val": 704,
+        "n_train": 12685,
+        "n_val": 1409,
         "n_test": 304,
         "vocab_size_cat": 26202,
-        "vocab_size_db": 52619,
-        "vocab_size_ge": 1024,
+        "vocab_size_db": 0,
+        "vocab_size_ge": 0,
         "active_encodings": [
-          "categorical_id",
-          "debruijn",
-          "graph_embedding"
+          "categorical_id"
         ],
         "user_aware_eval": true,
         "user_history_nodes": 3000
@@ -362,6 +333,42 @@
       "ar_rel_distance_median": 9.643754117117286,
       "ar_pred_path_len_ratio_mean": 0.9543231027658703,
       "ar_pred_path_len_ratio_median": 0.9583785511789955
+    },
+    "MC2": {
+      "accuracy_top1": 0.934,
+      "accuracy_top3": 0.9965,
+      "accuracy_top5": 0.9975,
+      "mrr": 0.9635007924873772,
+      "nll": 1.916976600162088,
+      "brier": 0.10348719057550852,
+      "ndcg5": 0.9722926291134337,
+      "n_samples": 2000.0,
+      "dist_km": 0.011689330001973747,
+      "train_time_s": 3.4491257667541504,
+      "ar_accuracy_top1": 0.12122093023255814,
+      "ar_accuracy_top3": 0.5927325581395348,
+      "ar_accuracy_top5": 0.9959302325581395,
+      "ar_mrr": 0.377635658914725,
+      "ar_nll": 24.064891467189817,
+      "ar_endpoint_match": 0.13333333333333333,
+      "ar_path_jaccard": 0.3030881607070864,
+      "ar_n_tokens": 3440.0,
+      "ar_n_paths": 30.0,
+      "ar_n_paths_scored": 30.0,
+      "ar_endpoint_hops_mean": 18.666666666666668,
+      "ar_endpoint_hops_median": 16.5,
+      "ar_endpoint_hops_cap": 31.0,
+      "ar_endpoint_dist_km_mean": 6.307903079437005,
+      "ar_endpoint_dist_km_median": 2.8204263798815896,
+      "ar_reliable_horizon_mean": 13.9,
+      "ar_reliable_horizon_median": 7.5,
+      "ar_horizon_acc75_mean": 17.2,
+      "ar_horizon_acc75_median": 9.0,
+      "ar_horizon_accept_acc": 0.75,
+      "ar_rel_distance_mean": 25.090423960017162,
+      "ar_rel_distance_median": 12.40942554515777,
+      "ar_pred_path_len_ratio_mean": 1.1301528162981866,
+      "ar_pred_path_len_ratio_median": 0.9933557090534377
     },
     "AKOM": {
       "accuracy_top1": 0.891,
@@ -505,42 +512,6 @@
       "ar_rel_distance_mean": 21.443141331139937,
       "ar_rel_distance_median": 14.585473802123527,
       "ar_pred_path_len_ratio_mean": 1.1516252971986987,
-      "ar_pred_path_len_ratio_median": 1.0
-    },
-    "MC2": {
-      "accuracy_top1": 0.9355,
-      "accuracy_top3": 0.9945,
-      "accuracy_top5": 0.9945,
-      "mrr": 0.9650011805270913,
-      "nll": 3.9309290795690663,
-      "brier": 0.09508931032064316,
-      "ndcg5": 0.9727248554607181,
-      "n_samples": 2000.0,
-      "dist_km": 0.011230427506143349,
-      "train_time_s": 1.9311623573303223,
-      "ar_accuracy_top1": 0.11337209302325581,
-      "ar_accuracy_top3": 0.9709302325581395,
-      "ar_accuracy_top5": 1.0,
-      "ar_mrr": 0.4991279069767389,
-      "ar_nll": 24.298461243460334,
-      "ar_endpoint_match": 0.13333333333333333,
-      "ar_path_jaccard": 0.2874193699306455,
-      "ar_n_tokens": 3440.0,
-      "ar_n_paths": 30.0,
-      "ar_n_paths_scored": 30.0,
-      "ar_endpoint_hops_mean": 19.866666666666667,
-      "ar_endpoint_hops_median": 27.5,
-      "ar_endpoint_hops_cap": 31.0,
-      "ar_endpoint_dist_km_mean": 5.443631417872365,
-      "ar_endpoint_dist_km_median": 3.0664216226595578,
-      "ar_reliable_horizon_mean": 12.966666666666667,
-      "ar_reliable_horizon_median": 7.5,
-      "ar_horizon_acc75_mean": 16.166666666666668,
-      "ar_horizon_acc75_median": 9.0,
-      "ar_horizon_accept_acc": 0.75,
-      "ar_rel_distance_mean": 21.883087972208106,
-      "ar_rel_distance_median": 12.407973900642158,
-      "ar_pred_path_len_ratio_mean": 1.1244260925635214,
       "ar_pred_path_len_ratio_median": 1.0
     },
     "MC2P": {

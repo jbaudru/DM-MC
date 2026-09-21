@@ -1,29 +1,29 @@
 \begin{table}[h!]
 \centering
 \small
-\caption{Prediction accuracy and certainty for the next-node and auto-regressive tasks, averaged over 4 datasets. The Acceptable Node Horizon is the mean number of consecutive future nodes predicted in auto-regressive rollout while cumulative top-1 accuracy stays $\geq 75\%$ (higher $=$ longer reliable prediction). NLL is the mean negative log-likelihood of the realised next node (bits, lower $=$ more certain).}
+\caption{Prediction accuracy and certainty for the next-node and auto-regressive tasks, averaged over 4 datasets. The Acceptable Node Horizon is the mean number of consecutive future nodes predicted in auto-regressive rollout while cumulative top-1 accuracy stays $\geq 75\%$ (higher $=$ longer reliable prediction). Next-node performance is reported as $1-\mathrm{Accuracy}$ to make small differences more visible. NLL is the mean negative log-likelihood of the realised next node (bits, lower $=$ more certain).}
 \label{tab:comparison_all}
 \resizebox{\linewidth}{!}{%
 \begin{tabular}{lrr|rr}
 \toprule
 \multicolumn{1}{c}{} & \multicolumn{2}{c|}{\textbf{Next-node prediction}} & \multicolumn{2}{c}{\textbf{Auto-regressive rollout}} \\
-\textbf{Model} & \textbf{Acc@1}$\uparrow$ & \textbf{NLL (bits)}$\downarrow$ & \textbf{Acc. Node Horizon}$\uparrow$ & \textbf{Endpoint dist (km)}$\downarrow$ \\
+\textbf{Model} & \textbf{1-Accuracy}$\downarrow$ & \textbf{NLL (bits)}$\downarrow$ & \textbf{Acc. Node Horizon}$\uparrow$ & \textbf{Endpoint dist (km)}$\downarrow$ \\
 \midrule
-DM-MC2 & 0.9317 (0.0149) & 0.4180 (0.1233) & 12.91 (2.25) & 6.6260 (3.2003) \\
-DM-MC5 & 0.9447 (0.0129) & 0.3199 (0.1212) & 13.74 (2.11) & 5.9394 (3.0283) \\
-DM-MC10 & 0.9481 (0.0145) & \textbf{0.3048} (0.1336) & 14.92 (1.87) & 6.2238 (3.5434) \\
+DM-MC2 & 0.07 (0.01) & 0.42 (0.12) & 12.91 (2.25) & 6.63 (3.20) \\
+DM-MC5 & 0.06 (0.01) & 0.32 (0.12) & 13.74 (2.11) & 5.94 (3.03) \\
+DM-MC10 & {\setlength{\fboxsep}{1pt}\fbox{0.05 (0.01)}} & {\setlength{\fboxsep}{1pt}\fbox{0.30 (0.13)}} & 14.92 (1.87) & 6.22 (3.54) \\
 \hline
-AKOM & 0.8829 (0.0593) & 2.1748 (1.6363) & 12.17 (1.83) & 5.5722 (2.3902) \\
-CPT & 0.9440 (0.0158) & 3.5694 (3.5015) & 13.48 (2.56) & 7.6176 (4.4197) \\
-IOHMM & 0.9322 (0.0125) & 5.0692 (4.8594) & 13.24 (1.63) & 6.7344 (3.0612) \\
-MOGEN & 0.9167 (0.0417) & 2.8384 (3.0315) & 14.96 (3.50) & \textbf{5.1624} (2.7636) \\
+AKOM & 0.12 (0.06) & 2.17 (1.64) & 12.17 (1.83) & 5.57 (2.39) \\
+CPT & 0.06 (0.02) & 3.57 (3.50) & 13.48 (2.56) & 7.62 (4.42) \\
+IOHMM & 0.07 (0.01) & 5.07 (4.86) & 13.24 (1.63) & 6.73 (3.06) \\
+MOGEN & 0.08 (0.04) & 2.84 (3.03) & 14.96 (3.50) & {\setlength{\fboxsep}{1pt}\fbox{5.16 (2.76)}} \\
 \hline
-HW-MC2 & 0.9319 (0.0132) & 5.3098 (5.2426) & 13.40 (1.77) & 6.9689 (2.9839) \\
-HW-MC5 & 0.9450 (0.0110) & 3.7380 (3.7510) & 14.12 (2.17) & 6.8933 (4.1238) \\
-HW-MC10 & 0.9485 (0.0138) & 3.7757 (3.8109) & 16.27 (2.54) & 6.4454 (3.6223) \\
-MC2P & 0.9319 (0.0132) & 5.3098 (5.2426) & 13.40 (1.77) & 6.9689 (2.9839) \\
-MC5P & 0.9453 (0.0126) & 7.2539 (6.2935) & 14.42 (2.70) & 5.9068 (3.0154) \\
-MC10P & \textbf{0.9501} (0.0140) & 10.9647 (9.8026) & \textbf{17.37} (3.17) & 5.5376 (2.6208) \\
+HW-MC2 & 0.07 (0.01) & 2.16 (2.11) & 12.94 (2.46) & 7.08 (4.03) \\
+HW-MC5 & 0.06 (0.01) & 3.74 (3.75) & 14.12 (2.17) & 6.89 (4.12) \\
+HW-MC10 & {\setlength{\fboxsep}{1pt}\fbox{0.05 (0.01)}} & 3.78 (3.81) & 16.27 (2.54) & 6.45 (3.62) \\
+MC2 & 0.07 (0.01) & 5.31 (5.24) & 13.40 (1.77) & 6.97 (2.98) \\
+MC5 & {\setlength{\fboxsep}{1pt}\fbox{0.05 (0.01)}} & 7.25 (6.29) & 14.42 (2.70) & 5.91 (3.02) \\
+MC10 & {\setlength{\fboxsep}{1pt}\fbox{0.05 (0.01)}} & 10.96 (9.80) & {\setlength{\fboxsep}{1pt}\fbox{17.37 (3.17)}} & 5.54 (2.62) \\
 \bottomrule
 \end{tabular}
 }%  end resizebox
